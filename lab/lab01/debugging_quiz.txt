@@ -1,0 +1,35 @@
+01) In the following traceback, what is the most recen function call?
+
+    h(x + y * 5)
+
+02) In the following traceback, what is the cause of this error?
+
+    The code attempted to add a string to an integer
+
+03) How do you write a doctest asserting that square(2) == 4?
+
+    def square(x):
+        '''
+        >>> square(2)
+        4
+        '''
+        return x * x
+
+04) When should you use print statements?
+
+    To investigate the values of variables at certain points in your code
+
+05) How do you prevent the ok autograder from interpreting print statements as
+    output?
+
+    Print with 'DEBUG:' at the front of the outputted line
+
+06) What is the best way to open an interactive terminal to investigate a
+    failing test for question sum_digits in assignment lab01?
+
+    python3 -i lab01.py
+
+07) Which of the following is NOT true?
+
+    Code that returns a wrong answer instead of crashing is generally better as
+    it at least works fine
