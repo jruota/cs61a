@@ -163,3 +163,5 @@ cython_debug/
 *.zip
 ok
 tests/
+study_guides/
+lecture_slides/
