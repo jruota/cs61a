@@ -166,3 +166,4 @@ tests/
 study_guides/
 lecture_slides/
 discussion_slides/
+*.pdf
