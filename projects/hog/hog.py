@@ -235,6 +235,16 @@ def is_always_roll(strategy, goal=GOAL):
     """
     # BEGIN PROBLEM 7
     "*** YOUR CODE HERE ***"
+    initial_no_of_rolls = strategy(0, 0)
+    score0, score1 = 0, 0
+    while (score0 < goal):
+        while (score1 < goal):
+            if (strategy(score0, score1) != initial_no_of_rolls):
+                return False
+            score1 += 1
+        score0 += 1
+        score1 = 0
+    return True
     # END PROBLEM 7
 
 
