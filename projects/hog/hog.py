@@ -168,6 +168,14 @@ def play(strategy0, strategy1, update,
     who = 0  # Who is about to take a turn, 0 (first) or 1 (second)
     # BEGIN PROBLEM 5
     "*** YOUR CODE HERE ***"
+    while (score0 < goal and score1 < goal):
+        if (who == 0):
+            no_of_rolls = strategy0(score0, score1)
+            score0 = update(no_of_rolls, score0, score1, dice)
+        else:
+            no_of_rolls = strategy1(score1, score0)
+            score1 = update(no_of_rolls, score1, score0, dice)
+        who = 1 - who
     # END PROBLEM 5
     return score0, score1
 
