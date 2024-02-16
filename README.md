@@ -1,4 +1,4 @@
-# cs61a
+# cs61a (Spring 2024)
 
 CS 61A: Structure and Interpretation of Computer Programs
 
@@ -18,3 +18,8 @@ Prerequisite for [CS 61B](https://www2.eecs.berkeley.edu/Courses/CS61B/) and
 >```
 >
 >Source: [this reddit post](https://www.reddit.com/r/berkeley/comments/lk8j71/self_studying_cs61a_not_a_berkeley_student/?rdt=63227)
+
+## Incomplete Topics / for Review
+
+- [ ] Homework 03: Exam Practice "Palindromes", Just For Fun Questions
+
