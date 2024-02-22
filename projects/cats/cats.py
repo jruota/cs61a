@@ -288,9 +288,16 @@ def report_progress(typed, source, user_id, upload):
     ID: 3 Progress: 0.2
     0.2
     """
-    # BEGIN PROBLEM 8
-    "*** YOUR CODE HERE ***"
-    # END PROBLEM 8
+    word_count = 0
+    for i in range(len(typed)):
+        if typed[i] != source[i]:
+            progress = word_count / len(source)
+            upload({"id": user_id, "progress": progress})
+            return progress
+        word_count += 1
+    progress = word_count / len(source)
+    upload({"id": user_id, "progress": progress})
+    return progress
 
 
 def time_per_word(words, timestamps_per_player):
