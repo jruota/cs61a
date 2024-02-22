@@ -200,12 +200,11 @@ def feline_fixes(typed, source, limit):
     # BEGIN PROBLEM 6
     if limit < 0:
         return 1
-    if len(typed) == 0 and len(source) == 0:
+    if typed == source:
         return 0
-    if len(typed) == 0 and len(source) > 0:
-        return len(source)
-    if len(typed) > 0 and len(source) == 0:
-        return len(typed)
+    if ((len(typed) == 0 and len(source) > 0) or
+        (len(typed) > 0 and len(source) == 0)):
+        return abs(len(source) - len(typed))
     if typed[0] != source[0]:
         return 1 + feline_fixes(typed[1:], source[1:], limit - 1)
     return feline_fixes(typed[1:], source[1:], limit)
