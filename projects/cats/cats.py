@@ -316,9 +316,13 @@ def time_per_word(words, timestamps_per_player):
     >>> get_all_times(match)
     [[6, 3, 6, 2], [10, 6, 1, 2]]
     """
-    # BEGIN PROBLEM 9
-    "*** YOUR CODE HERE ***"
-    # END PROBLEM 9
+    times = []
+    for timestamp in timestamps_per_player:
+        times_per_player = []
+        for j in range(1, len(timestamp)):
+            times_per_player += [timestamp[j] - timestamp[j - 1]]
+        times += [times_per_player]
+    return match(words, times)
 
 
 def fastest_words(match):
